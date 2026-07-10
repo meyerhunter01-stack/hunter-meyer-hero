@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+
+html, body {
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+}
+
+
+.hero {
+
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+
+    overflow: hidden;
+
+}
+
+
+
+.headshot {
+
+    width: 300px;
+    height: 390px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    opacity: 0;
+
+    transform: translateX(-50px);
+
+    animation: imageFade 1.5s ease forwards;
+
+}
+
+
+
+.text {
+
+    text-align: center;
+
+}
+
+
+
+.name {
+
+    font-family: "Rock Salt", cursive;
+
+    font-size: 60px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation: fadeIn 2s ease forwards;
+
+    animation-delay: 1s;
+
+}
+
+
+
+.welcome {
+
+    font-size: 32px;
+
+    margin-top: 20px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation: fadeIn 2s ease forwards;
+
+    animation-delay: 2s;
+
+}
+
+
+
+
+@keyframes imageFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(-50px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+
+@media(max-width:800px) {
+
+
+.hero {
+
+    height: 390px;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+
+.headshot {
+
+    width: 130px;
+
+    height: 165px;
+
+}
+
+
+
+.name {
+
+    font-size: 28px;
+
+}
+
+
+
+.welcome {
+
+    font-size: 20px;
+
+    margin-top: 5px;
+
+}
+
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="hero">
+
+
+<img class="headshot"
+src="https://lh3.googleusercontent.com/sitesv/AA5AbUCiVRUBcopAX2D_MGH6PzUivXzmieOM71l5ZKEDBC_HtW0EfR7quvdEFLAllKmopZh2eEAtPPzX2KCrAwft9D6vz8pMzsLF8e9cxUDsylY_OYMzivz1gLCkxi8bk_f-USmhBY3Jtx8nkP0U8878mZW8_qHNGDoIhMp36Yn1us_GtWvj3ShQTT_D2JU_bpBqVAOvTBmwpErzI8FG2Ic9cxb6P2LyWlVcOlkNsEaPRnk=w1280">
+
+
+<div class="text">
+
+<div class="name">
+Hunter Meyer
+</div>
+
+<div class="welcome">
+Welcome!
+</div>
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

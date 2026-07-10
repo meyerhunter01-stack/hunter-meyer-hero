@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,266 +10,246 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
-*{
-    box-sizing:border-box;
+
+* {
+    box-sizing: border-box;
 }
 
-html,body{
-    margin:0;
-    padding:0;
-    overflow:hidden;
-    background:transparent;
-    font-family:Roboto, Medium;
-}
 
-.hero{
+html, body {
 
-    width:100%;
-    min-height:520px;
+    margin: 0;
+    padding: 0;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    overflow: hidden;
 
-    gap:50px;
+    background: transparent;
 
-    overflow:hidden;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
+
+
+
+.hero {
+
+    width: 100%;
+
+    height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    overflow: hidden;
+
+}
+
 
 
 /* HEADSHOT */
 
-.headshot{
+.headshot {
 
-    width:300px;
-    height:380px;
+    width: 300px;
 
-    object-fit:contain;
+    height: 380px;
 
-    border-radius:12px;
+    object-fit: contain;
 
-    opacity:0;
-    transform:translateX(-50px);
+    border-radius: 12px;
 
-    animation:imageFade 1.5s ease forwards;
+    opacity: 0;
+
+    transform: translateX(-50px);
+
+    animation: imageFade 1.5s ease forwards;
 
 }
+
 
 
 /* TEXT */
 
-.text{
+.text {
 
-    text-align:center;
-
-}
-
-
-.name{
-
-    font-family:"Rock Salt", cursive;
-
-    font-size:55px;
-
-    line-height:1.25;
-
-    opacity:0;
-
-    transform:translateY(20px);
-
-    animation:textFade 2s ease forwards;
-
-    animation-delay:1s;
+    text-align: center;
 
 }
 
 
-.welcome{
 
-    font-size:32px;
+.name {
 
-    margin-top:15px;
+    font-family: "Rock Salt", cursive;
 
-    opacity:0;
+    font-size: 55px;
 
-    transform:translateY(20px);
+    line-height: 1.25;
 
-    animation:textFade 2s ease forwards;
+    opacity: 0;
 
-    animation-delay:2s;
+    transform: translateY(20px);
 
-}
+    animation: textFade 2s ease forwards;
 
-
-/* BUTTON */
-
-.hero-button{
-
-    display:inline-block;
-
-    margin-top:30px;
-
-    padding:14px 34px;
-
-    border:2px solid #000;
-
-    border-radius:0;
-
-    background:transparent;
-
-    color:#000;
-
-    text-decoration:none;
-
-    font-size:22px;
-
-    font-family:Roboto, Medium;
-
-    font-weight:500;
-
-    opacity:0;
-
-    transform:translateY(20px);
-
-    animation:textFade 2s ease forwards;
-
-    animation-delay:3s;
-
-    transition:
-        background .3s ease,
-        color .3s ease,
-        transform .3s ease;
+    animation-delay: 1s;
 
 }
 
 
-.hero-button:hover{
 
-    background:#000;
+.welcome {
 
-    color:#fff;
+    font-size: 32px;
 
-    transform:translateY(-2px);
+    margin-top: 15px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation: textFade 2s ease forwards;
+
+    animation-delay: 2s;
 
 }
+
 
 
 /* ANIMATIONS */
 
-@keyframes imageFade{
+@keyframes imageFade {
 
-    from{
-        opacity:0;
-        transform:translateX(-50px);
+    from {
+
+        opacity: 0;
+
+        transform: translateX(-50px);
+
     }
 
-    to{
-        opacity:1;
-        transform:translateX(0);
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+
+@keyframes textFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
     }
 
 }
 
-@keyframes textFade{
-
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
 
 
 /* MOBILE */
 
-@media(max-width:800px){
+@media(max-width:800px) {
 
-.hero{
 
-    height:450px;
+    .hero {
 
-    flex-direction:column;
+        height: 450px;
 
-    gap:10px;
+        flex-direction: column;
 
-    padding:20px;
+        gap: 10px;
+
+        padding: 20px;
+
+    }
+
+
+
+    .headshot {
+
+        width: 150px;
+
+        height: 190px;
+
+    }
+
+
+
+    .name {
+
+        font-size: 30px;
+
+    }
+
+
+
+    .welcome {
+
+        font-size: 21px;
+
+        margin-top: 8px;
+
+    }
+
 
 }
 
-.headshot{
-
-    width:150px;
-    height:190px;
-
-}
-
-.name{
-
-    font-size:30px;
-
-}
-
-.welcome{
-
-    font-size:21px;
-
-    margin-top:8px;
-
-}
-
-.hero-button{
-
-    font-size:18px;
-
-    padding:10px 26px;
-
-    margin-top:18px;
-
-}
-
-}
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <div class="hero">
 
-    <img
-        class="headshot"
-        src="hunter-meyer-headshot.jpg"
-        alt="Headshot of Hunter Meyer">
 
-    <div class="text">
+<img class="headshot"
+src="hunter-meyer-headshot.jpg"
+alt="Headshot of Hunter Meyer">
 
-        <div class="name">
-            Hunter Meyer
-        </div>
 
-        <div class="welcome">
-            Welcome!
-        </div>
+<div class="text">
 
-        <a
-            <a
-    class="hero-button"
-    href="https://www.huntermeyer.net/about"
-    onclick="window.top.location.href='https://www.huntermeyer.net/about'; return false;">
-    Learn More
-</a>
-        </a>
 
-    </div>
+<div class="name">
+Hunter Meyer
+</div>
+
+
+<div class="welcome">
+Welcome!
+</div>
+
 
 </div>
+
+
+</div>
+
 
 </body>
 

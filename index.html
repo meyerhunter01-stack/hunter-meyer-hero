@@ -33,13 +33,14 @@ html, body {
 }
 
 
+
 /* HERO */
 
 .hero {
 
     width: 100%;
 
-    height: 650px;
+    height: 100vh;
 
     display: flex;
 
@@ -49,7 +50,9 @@ html, body {
 
     gap: 60px;
 
-    transform: translateY(60px) scale(1.25);
+    padding: 0;
+
+    transform: translateY(60px);
 
 }
 
@@ -59,9 +62,9 @@ html, body {
 
 .headshot {
 
-    width: 800px;
+    width: 330px;
 
-    height: 800px;
+    height: 420px;
 
     object-fit: contain;
 
@@ -91,7 +94,7 @@ html, body {
 
     font-family: "Rock Salt", cursive;
 
-    font-size: 120px;
+    font-size: 60px;
 
     line-height: 1.3;
 
@@ -109,7 +112,7 @@ html, body {
 
 .welcome {
 
-    font-size: 68px;
+    font-size: 34px;
 
     margin-top: 20px;
 
@@ -126,7 +129,6 @@ html, body {
 
 
 /* ANIMATIONS */
-
 
 @keyframes imageFade {
 
@@ -174,27 +176,27 @@ html, body {
 
 /* MOBILE */
 
-@media(max-width:800px) {
+@media(max-width:600px) {
+
 
     .hero {
 
-        height:100vh;
+        height: 100vh;
 
-        transform:none;
+        flex-direction: column;
 
-        flex-direction:column;
+        justify-content: center;
 
-        justify-content:center;
+        align-items: center;
 
-        align-items:center;
+        gap: 15px;
 
-        gap:15px;
+        padding: 20px;
 
-        padding:20px;
+        transform: none;
 
     }
 
-}
 
 
     .headshot {

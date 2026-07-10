@@ -10,6 +10,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 
+* {
+    box-sizing: border-box;
+}
+
+
 html, body {
 
     margin: 0;
@@ -20,31 +25,41 @@ html, body {
 
     overflow: hidden;
 
+    background: transparent;
+
+    font-family: Arial, sans-serif;
+
 }
 
+
+
+/* HERO */
 
 .hero {
 
     width: 100%;
-    height: 500px;
+    height: 100dvh;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    gap: 50px;
+    gap: clamp(30px, 6vw, 80px);
 
-    overflow: hidden;
+    padding: 40px;
 
 }
 
 
 
+/* HEADSHOT */
+
 .headshot {
 
-    width: 300px;
-    height: 390px;
+    width: clamp(180px, 28vw, 330px);
+
+    height: clamp(240px, 38vw, 430px);
 
     object-fit: cover;
 
@@ -52,7 +67,7 @@ html, body {
 
     opacity: 0;
 
-    transform: translateX(-50px);
+    transform: translateX(-60px);
 
     animation: imageFade 1.5s ease forwards;
 
@@ -60,9 +75,13 @@ html, body {
 
 
 
+/* TEXT */
+
 .text {
 
     text-align: center;
+
+    max-width: 550px;
 
 }
 
@@ -72,11 +91,13 @@ html, body {
 
     font-family: "Rock Salt", cursive;
 
-    font-size: 60px;
+    font-size: clamp(35px, 5vw, 70px);
+
+    line-height: 1.3;
 
     opacity: 0;
 
-    transform: translateY(20px);
+    transform: translateY(25px);
 
     animation: fadeIn 2s ease forwards;
 
@@ -88,7 +109,7 @@ html, body {
 
 .welcome {
 
-    font-size: 32px;
+    font-size: clamp(22px, 3vw, 35px);
 
     margin-top: 20px;
 
@@ -104,6 +125,8 @@ html, body {
 
 
 
+/* ANIMATIONS */
+
 
 @keyframes imageFade {
 
@@ -111,9 +134,10 @@ html, body {
 
         opacity: 0;
 
-        transform: translateX(-50px);
+        transform: translateX(-60px);
 
     }
+
 
     to {
 
@@ -133,9 +157,10 @@ html, body {
 
         opacity: 0;
 
-        transform: translateY(20px);
+        transform: translateY(25px);
 
     }
+
 
     to {
 
@@ -149,47 +174,54 @@ html, body {
 
 
 
+/* MOBILE */
 
 @media(max-width:800px) {
 
 
-.hero {
+    .hero {
 
-    height: 390px;
+        height: 100dvh;
 
-    flex-direction: column;
+        flex-direction: column;
 
-    gap: 8px;
+        justify-content: center;
 
-}
+        gap: 18px;
 
+        padding: 25px 20px;
 
-
-.headshot {
-
-    width: 130px;
-
-    height: 165px;
-
-}
+    }
 
 
 
-.name {
+    .headshot {
 
-    font-size: 28px;
+        width: min(55vw, 200px);
 
-}
+        height: min(70vw, 260px);
+
+        object-fit: cover;
+
+    }
 
 
 
-.welcome {
+    .name {
 
-    font-size: 20px;
+        font-size: clamp(28px, 8vw, 40px);
 
-    margin-top: 5px;
+    }
 
-}
+
+
+    .welcome {
+
+        font-size: 22px;
+
+        margin-top: 10px;
+
+    }
 
 
 }
@@ -206,21 +238,23 @@ html, body {
 <div class="hero">
 
 
-<img class="headshot"
-src="https://lh3.googleusercontent.com/sitesv/AA5AbUCiVRUBcopAX2D_MGH6PzUivXzmieOM71l5ZKEDBC_HtW0EfR7quvdEFLAllKmopZh2eEAtPPzX2KCrAwft9D6vz8pMzsLF8e9cxUDsylY_OYMzivz1gLCkxi8bk_f-USmhBY3Jtx8nkP0U8878mZW8_qHNGDoIhMp36Yn1us_GtWvj3ShQTT_D2JU_bpBqVAOvTBmwpErzI8FG2Ic9cxb6P2LyWlVcOlkNsEaPRnk=w1280">
+    <img class="headshot"
+    src="https://lh3.googleusercontent.com/sitesv/AA5AbUCiVRUBcopAX2D_MGH6PzUivXzmieOM71l5ZKEDBC_HtW0EfR7quvdEFLAllKmopZh2eEAtPPzX2KCrAwft9D6vz8pMzsLF8e9cxUDsylY_OYMzivz1gLCkxi8bk_f-USmhBY3Jtx8nkP0U8878mZW8_qHNGDoIhMp36Yn1us_GtWvj3ShQTT_D2JU_bpBqVAOvTBmwpErzI8FG2Ic9cxb6P2LyWlVcOlkNsEaPRnk=w1280">
 
 
-<div class="text">
+    <div class="text">
 
-<div class="name">
-Hunter Meyer
-</div>
+        <div class="name">
+            Hunter Meyer
+        </div>
 
-<div class="welcome">
-Welcome!
-</div>
 
-</div>
+        <div class="welcome">
+            Welcome!
+        </div>
+
+
+    </div>
 
 
 </div>
